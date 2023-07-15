@@ -1,11 +1,11 @@
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Drawing;
 using System.IO;
 
-namespace bootselenium
+namespace Selenium
 {
     public class Tests
     {
@@ -69,7 +69,7 @@ namespace bootselenium
 
             }
 
-            // Role a p?gina para a posi??o desejada (x, y) usando JavaScript Executor
+            // Role a p�gina para a posi��o desejada (x, y) usando JavaScript Executor
             int scrollX = 0;
             int scrollY = 720;
             ((IJavaScriptExecutor)driver).ExecuteScript($"window.scrollTo({scrollX}, {scrollY});");
@@ -89,7 +89,7 @@ namespace bootselenium
 
             string path = Path.Combine(folderPath, fileName);
             screenshot.SaveAsFile(path, ScreenshotImageFormat.Png);
-            // Os Screenshot s?o salvos na pasta bootselenium\bootselenium\bin\Debug\net5.0\Prints
+            // Os Screenshot s�o salvos na pasta bootselenium\bootselenium\bin\Debug\net5.0\Prints
 
             Assert.Pass();
         }
